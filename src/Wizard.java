@@ -2,11 +2,12 @@ import java.util.Random;
 
 public class Wizard extends Unit{
 
-    private int mana = 100;
     public Wizard(String name) {
         super(name);
         this.power = 25;
         this.defence = 3;
+        this.mana = 100;
+        this.type = "wizard";
     }
 
     @Override

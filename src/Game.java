@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Game {
     private static Player player1;
@@ -54,5 +55,45 @@ public class Game {
 
         }
         return;
+    }
+
+    public static int chooseAttacker(Player attacker){
+        ArrayList<Unit> u = attacker.getUnits();
+        int AUNum = -1;
+        for(int i=0;i<u.size();i++){
+            if (u.get(i).getType().equals("wizard") && u.get(i).getMana() > 0){
+                AUNum = i;
+                break;
+            }
+        }
+        if(AUNum == -1){
+            Random rnd = new Random();
+            AUNum = rnd.nextInt(u.size());
+        }
+        return AUNum;
+    }
+
+    public static int chooseDefencer(Player defender){
+        ArrayList<Unit> u = defender.getUnits();
+        int DUNum = -1;
+        for(int i=0;i<u.size();i++){
+            if (u.get(i).getType().equals("wizard")){
+                DUNum = i;
+                break;
+            }
+        }
+        if(DUNum == -1){
+            int minHealth = 1000;
+            for(int i=0;i<u.size();i++){
+                if(u.get(i).getHealth() < minHealth){
+                    minHealth = u.get(i).getHealth();
+                    DUNum = i;
+                }
+            }
+        }
+        if(DUNum == -1){
+            DUNum = 0;
+        }
+        return DUNum;
     }
 }

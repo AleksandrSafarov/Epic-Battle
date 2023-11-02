@@ -7,6 +7,8 @@ public class Unit {
     protected int power = 10;
     protected int CriticalChance = 1;
     protected int ParryChance = 1;
+    protected String type = "Unit";
+    protected int mana = 0;
     public Unit(String name){
         this.name = name;
     }
@@ -58,6 +60,15 @@ public class Unit {
     public void setParryChance(int parryChance) {
         ParryChance = parryChance;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public int getMana() {
+        return mana;
+    }
+
     public void attack(Unit unit){
 
     }

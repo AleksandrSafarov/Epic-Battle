@@ -5,6 +5,7 @@ public class Knight extends Unit{
     public Knight(String name) {
         super(name);
         this.health = 110;
+        type = "knight";
     }
     @Override
     public void attack(Unit unit) {

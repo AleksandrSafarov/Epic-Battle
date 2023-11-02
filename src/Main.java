@@ -86,10 +86,10 @@ public class Main {
                 DefencerUnit = defencer.getUnits().get(DUNum);
             }
             else{
-                AttackerUnit = attacker.getUnits().get(0);
-                AUNum = 0;
-                DefencerUnit = defencer.getUnits().get(0);
-                DUNum = 0;
+                AUNum = Game.chooseAttacker(attacker);
+                DUNum = Game.chooseDefencer(defencer);
+                AttackerUnit = attacker.getUnits().get(AUNum);
+                DefencerUnit = defencer.getUnits().get(DUNum);
             }
             AttackerUnit.attack(DefencerUnit);
             ArrayList<Unit> APU = attacker.getUnits();

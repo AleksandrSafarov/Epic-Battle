@@ -7,6 +7,7 @@ public class Terminator extends Unit{
         this.power = 15;
         this.defence = 7;
         this.CriticalChance = 2;
+        type = "terminator";
     }
 
     @Override
