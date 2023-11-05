@@ -76,7 +76,7 @@ public class Unit {
     public void getDamage(int damage){
         Random rnd = new Random();
         int n = rnd.nextInt(100) + 1;
-        if(n <= defence ){
+        if(n <= ParryChance*10 ){
             Util.parryLog(damage, this);
             return;
         }

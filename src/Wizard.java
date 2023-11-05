@@ -14,7 +14,7 @@ public class Wizard extends Unit{
     public void attack(Unit unit) {
         Random rnd = new Random();
         int n = rnd.nextInt(100)+1;
-        if (n <= CriticalChance){
+        if (n <= CriticalChance*10){
             mana += 20;
             power = 40;
             super.attack(unit);

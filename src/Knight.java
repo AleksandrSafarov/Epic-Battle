@@ -11,7 +11,7 @@ public class Knight extends Unit{
     public void attack(Unit unit) {
         Random rnd = new Random();
         int n = rnd.nextInt(100)+1;
-        if (n <= CriticalChance){
+        if (n <= CriticalChance*10){
             power = 20;
             health += 15;
             super.attack(unit);

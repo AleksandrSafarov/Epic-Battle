@@ -112,10 +112,10 @@ public class Main {
             Util.endRound();
         }
         if(finalRound%2==1){
-            System.out.println("Игрок 1, " + p1.getName()+", победил");
+            Util.GameOver(1, Game.getPlayer1().getName());
         }
         else{
-            System.out.println("Игрок 2, " + p2.getName()+", победил");
+            Util.GameOver(2, Game.getPlayer2().getName());
         }
     }
 }

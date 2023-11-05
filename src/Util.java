@@ -64,4 +64,8 @@ public class Util {
     public static void UnitDeath(String name){
         System.out.println("Юнит "+name+" погиб.");
     }
+
+    public static void GameOver(int playerNum, String name){
+        System.out.println("Игрок "+playerNum+", "+name+", победил!");
+    }
 }

@@ -14,7 +14,7 @@ public class Terminator extends Unit{
     public void attack(Unit unit) {
         Random rnd = new Random();
         int n = rnd.nextInt(100)+1;
-        if (n <= CriticalChance){
+        if (n <= CriticalChance*10){
             power = power*2;
             super.attack(unit);
             System.out.println("КРИТИЧЕСКИЙ УДАР. Юнит "+name+" увеличивает силу на 5, а сейчас наносит двойной урон " + unit.name);
